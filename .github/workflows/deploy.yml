@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Github Repository 코드 불러오기
-        run: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 의존성 설치
         run: npm i
