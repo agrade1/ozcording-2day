@@ -30,3 +30,6 @@ jobs:
 
       - name: S3에 파일 업로드하기
         run: aws s3 cp ./dist s3://ozcording-2day/ --recursive
+
+      - name: CloudFront 캐시 무효화
+        run: aws cloudfront create-invalidation --distribution-id E2IXTZPU57T7IQ --paths "/*"
