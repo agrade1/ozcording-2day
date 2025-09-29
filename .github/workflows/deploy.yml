@@ -12,5 +12,11 @@ jobs:
       - name: Github Repository 코드 불러오기
         run: actions/checkout@v4
 
-      - name: 파일 출력하기
-        run: ls
+      - name: 빌드하기
+        run: npm run bulid
+
+      - name: 디버깅
+        run: |
+          ls
+          cd dist
+          ls
