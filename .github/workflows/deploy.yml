@@ -1,4 +1,4 @@
-name: Github Actions 실행시켜보기
+name: Deploy TO S3 Invalidate Cloudfront
 
 on:
   push:
@@ -6,8 +6,11 @@ on:
       - main
 
 jobs:
-  ozcording-run:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world! 출력하기
-        run: echo "Hello word!"
+      - name: Github Repository 코드 불러오기
+        run: actions/checkout@v4
+
+      - name: 파일 출력하기
+        run: ls
